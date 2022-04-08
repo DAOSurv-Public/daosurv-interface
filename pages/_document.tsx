@@ -29,6 +29,7 @@ class CustomDocument extends Document {
             rel="stylesheet"
           /> */}
 
+          {/* test widget */}
           <link href="/widget/index.css" rel="stylesheet" />
           <script src="/widget/index.js"></script>
           <script
@@ -39,7 +40,6 @@ class CustomDocument extends Document {
             src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
             crossOrigin="true"
           ></script>
-          
         </Head>
         <body>
           <Main />

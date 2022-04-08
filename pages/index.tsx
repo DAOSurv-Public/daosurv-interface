@@ -16,11 +16,9 @@ const Home: NextPage = () => {
           <Button variant="outlined">Hello</Button>
         </Stack>
 
-        <div className="test"/>
+        <div className="test" />
 
-        <div id="something-in-your-website">
-          <div className="daoalert-widget" data-symbol="daoalert-widget"></div>
-        </div>
+        <div className="daoalert-widget" data-symbol="daoalert-widget"></div>
       </Box>
     </>
   )
