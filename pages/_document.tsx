@@ -28,6 +28,18 @@ class CustomDocument extends Document {
             href="https://fonts.googleapis.com/css2?family={name}:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
             rel="stylesheet"
           /> */}
+
+          <link href="/widget/index.css" rel="stylesheet" />
+          <script src="/widget/index.js"></script>
+          <script
+            src="https://unpkg.com/react@18/umd/react.development.js"
+            crossOrigin="true"
+          ></script>
+          <script
+            src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+            crossOrigin="true"
+          ></script>
+          
         </Head>
         <body>
           <Main />
