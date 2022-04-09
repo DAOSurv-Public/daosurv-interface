@@ -7,8 +7,8 @@ import { CustomDivider } from "components/CustomDivider"
 export const MockA = () => {
   return (
     <Box sx={{ py: { xs: "96px" } }}>
-      <Container maxWidth="xl">
-        <Grid container>
+      <Container maxWidth="lg">
+        <Grid container spacing={6}>
           <Grid
             item
             xs={6}
@@ -29,7 +29,7 @@ export const MockA = () => {
                 display: { xs: "flex" },
                 flexDirection: { xs: "column" },
                 justifyContent: { xs: "center" },
-                width: { xs: "50%" },
+                width: { xs: "80%" },
                 height: "100%",
               }}
             >

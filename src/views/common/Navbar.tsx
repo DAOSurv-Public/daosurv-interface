@@ -129,7 +129,7 @@ export const Navbar = () => {
 
       <Wrapper elevated={elevated}>
         <Box sx={{ background: "white", py: "10px" }}>
-          <Content maxWidth="xl" sx={{ alignItem: "center" }}>
+          <Content maxWidth="lg" sx={{ alignItem: "center" }}>
             <Link href="/">
               <a>
                 <img src="/static/images/logo.svg" height={40} />

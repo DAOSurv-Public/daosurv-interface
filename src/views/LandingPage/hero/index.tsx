@@ -12,7 +12,7 @@ export const Hero: NextPage = () => {
         backgroundPositionY: "bottom",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Grid
           container
           sx={{
