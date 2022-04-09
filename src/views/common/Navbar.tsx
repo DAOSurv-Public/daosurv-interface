@@ -24,6 +24,7 @@ import Router, { useRouter } from "next/router"
 import Link from "next/link"
 import { NextLinkComposed } from "views/NextLinkComposed"
 import { PrimaryButton } from "components/Button"
+import { useResponsive } from "hooks/useResponsive"
 
 const Wrapper = styled.div<{ elevated: boolean }>`
   position: sticky;
@@ -50,6 +51,7 @@ const Content = styled(Container)`
 
 export const Navbar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false)
+  const { isDesktop } = useResponsive()
 
   const router = useRouter()
 
@@ -89,7 +91,7 @@ export const Navbar = () => {
         open={isDrawerOpen}
         anchor="right"
         onClose={() => setDrawerOpen(false)}
-        PaperProps={{ sx: { minWidth: 260, bgcolor: "rgba(9, 9, 15, 1)" } }}
+        PaperProps={{ sx: { minWidth: 260 } }}
       >
         <List>
           {tabs.map((tab) => (
@@ -108,21 +110,10 @@ export const Navbar = () => {
               />
             </ListItemButton>
           ))}
-          <ListItemButton
-            key="/faucet"
-            selected={router.pathname.startsWith("/faucet")}
-            onClick={() => router.push("/faucet")}
-            sx={{ pl: 4 }}
-          >
-            <ListItemText
-              primary="Faucet"
-              primaryTypographyProps={{
-                fontWeight: 600,
-                color: router.pathname.startsWith("/faucet")
-                  ? "primary"
-                  : "text.primary",
-              }}
-            />
+          <ListItemButton>
+            <PrimaryButton sx={{ fontSize: "12px", fontWeight: "bold" }}>
+              Try widget
+            </PrimaryButton>
           </ListItemButton>
         </List>
       </Drawer>
@@ -132,13 +123,24 @@ export const Navbar = () => {
           <Content maxWidth="lg" sx={{ alignItem: "center" }}>
             <Link href="/">
               <a>
-                <img src="/static/images/logo.svg" height={40} />
+                <img
+                  src="/static/images/logo.svg"
+                  height={isDesktop ? 40 : 24}
+                />
               </a>
             </Link>
+            <Box sx={{ display: { xs: "flex", lg: "none" } }}>
+              <img
+                src="/static/icons/menu.svg"
+                width="32px"
+                style={{ cursor: "pointer" }}
+                onClick={() => setDrawerOpen(true)}
+              />
+            </Box>
             <Box
-              display="flex"
               alignItems="center"
               justifyContent="space-between"
+              sx={{ display: { xs: "none", lg: "flex" } }}
             >
               <Stack spacing={3} direction="row">
                 {tabs.map((tab, index) => (

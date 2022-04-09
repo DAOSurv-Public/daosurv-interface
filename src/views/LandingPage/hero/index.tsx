@@ -22,7 +22,7 @@ export const Hero: NextPage = () => {
           <Grid item xs={6}>
             <Box
               sx={{
-                width: { xs: "70%" },
+                width: { xs: "90%" },
                 display: { xs: "flex" },
                 flexDirection: { xs: "column" },
                 justifyContent: { xs: "center" },
