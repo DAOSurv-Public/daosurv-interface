@@ -1,4 +1,4 @@
-import { createTheme, ThemeOptions } from "@mui/material"
+import { createTheme, ThemeOptions } from "@mui/material";
 
 export const themeOptions: ThemeOptions = {
   breakpoints: {
@@ -154,6 +154,6 @@ export const themeOptions: ThemeOptions = {
       },
     },
   },
-}
+};
 
-export const theme = createTheme(themeOptions)
+export const theme = createTheme(themeOptions);
