@@ -23,11 +23,11 @@ export const PrimaryButton = styled(DefaultButton)`
   border: none;
   background: #0f35ff;
   border-radius: 40px;
-  padding: 8px 24px;
+  padding: 12px 24px;
   min-width: ${({ width }) => (width ? `${width}px` : "auto")};
   box-shadow: none;
   :hover {
-    background: #0f35ff;
+    background: #3F5DFF;
   }
 `
 
