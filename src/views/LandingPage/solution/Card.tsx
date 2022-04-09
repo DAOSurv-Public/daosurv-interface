@@ -10,7 +10,7 @@ type Props = {
 export const Card: React.FC<Props> = (props) => {
   const { title, description } = props
   return (
-    <Grid item xs={4}>
+    <Grid item xs={12} lg={4}>
       <Box
         display="grid"
         gridTemplateRows="210px 1fr"
