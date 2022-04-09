@@ -8,6 +8,7 @@ import { Widget } from "./widget"
 import { Social } from "./social"
 import { MockA } from "./mockA"
 import { Solution } from "./solution"
+import { HowItWork } from "./howitwork"
 
 export const LandingPage: NextPage = () => {
   return (
@@ -17,7 +18,8 @@ export const LandingPage: NextPage = () => {
       <Box sx={{ background: "#FCFCFD" }}>
         <MockA />
         <Solution />
-        <Widget />
+        <HowItWork />
+        {/* <Widget /> */}
       </Box>
     </>
   )
