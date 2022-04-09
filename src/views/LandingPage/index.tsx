@@ -15,7 +15,7 @@ export const LandingPage: NextPage = () => {
     <>
       <Hero />
       <Social />
-      <Box sx={{ background: "#FCFCFD" }}>
+      <Box sx={{ background: "#F7F6F7" }}>
         <MockA />
         <Solution />
         <HowItWork />

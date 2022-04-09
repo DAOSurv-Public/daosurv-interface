@@ -4,6 +4,7 @@ import Image from "next/image"
 import { PrimaryButton } from "components/Button"
 import { CustomDivider } from "components/CustomDivider"
 import { Card } from "./Card"
+import { useResponsive } from "hooks/useResponsive"
 
 const contents = [
   {
@@ -24,26 +25,50 @@ const contents = [
 ]
 
 export const Solution = () => {
+  const { isDesktop } = useResponsive()
+
   return (
     <Box sx={{ py: { xs: "96px" } }}>
       <Container maxWidth="lg">
-        <Box sx={{ width: { xs: "400px" } }}>
+        <Box sx={{ width: { xs: "auto", lg: "400px" } }}>
           <Typography
             sx={{
-              fontSize: { xs: "48px" },
+              fontSize: { xs: "36px", lg: "48px" },
               fontWeight: { xs: 700 },
               color: "#0D0D0D",
+              textAlign: { xs: "center", lg: "left" },
             }}
           >
             Solution
           </Typography>
-          <CustomDivider />
+          {isDesktop ? (
+            <CustomDivider />
+          ) : (
+            <Box display="flex" justifyContent="center">
+              <Box position="relative" sx={{ width: { xs: "280px" } }}>
+                <Box
+                  sx={{
+                    width: "32px",
+                    height: "2px",
+                    background: "#0028FF",
+                    position: "absolute",
+                    bottom: "0",
+                    left: "50%",
+                    right: "50%",
+                    transform: "translate(-50%, 0%)",
+                  }}
+                />
+                <Divider />
+              </Box>
+            </Box>
+          )}
           <Typography
             sx={{
               fontSize: { xs: "16px" },
               fontWeight: { xs: 400 },
               color: "#0D0D0D",
               mt: { xs: "12px" },
+              textAlign: { xs: "center", lg: "left" },
             }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada
