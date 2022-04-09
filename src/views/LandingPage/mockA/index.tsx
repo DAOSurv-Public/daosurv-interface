@@ -42,7 +42,7 @@ export const MockA = () => {
               >
                 Survelliance
               </Typography>
-              <CustomDivider />
+              <CustomDivider width="200px" />
 
               <Typography
                 sx={{

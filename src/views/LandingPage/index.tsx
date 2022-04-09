@@ -19,7 +19,7 @@ export const LandingPage: NextPage = () => {
         <MockA />
         <Solution />
         <HowItWork />
-        {/* <Widget /> */}
+        <Widget />
       </Box>
     </>
   )
