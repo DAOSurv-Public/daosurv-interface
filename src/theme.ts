@@ -12,7 +12,7 @@ export const themeOptions: ThemeOptions = {
     },
   },
   typography: {
-    // fontFamily: ['"{name}"', "sans-serif"].join(","),
+    fontFamily: ['"Montserrat"', "sans-serif"].join(","),
     fontSize: 16,
     fontWeightBold: 600,
     fontWeightMedium: 500,
@@ -135,14 +135,14 @@ export const themeOptions: ThemeOptions = {
       styleOverrides: {
         root: {
           textTransform: "none",
-          color: "white",
+          color: "black",
         },
       },
     },
     MuiRadio: {
       styleOverrides: {
         root: {
-          color: "white",
+          color: "black",
         },
       },
     },

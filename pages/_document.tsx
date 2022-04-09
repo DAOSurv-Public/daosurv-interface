@@ -24,10 +24,10 @@ class CustomDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
-          {/* <link
-            href="https://fonts.googleapis.com/css2?family={name}:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
             rel="stylesheet"
-          /> */}
+          />
 
           {/* test widget */}
           <link href="/widget/index.css" rel="stylesheet" />
