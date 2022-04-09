@@ -1,5 +1,5 @@
 import type { NextPage } from "next"
-import { Box, Container, Typography, Grid } from "@mui/material"
+import { Box, Container, Typography, Grid, Divider } from "@mui/material"
 import { PrimaryButton } from "components/Button"
 import TextLoop from "react-text-loop"
 import Image from "next/image"
@@ -59,6 +59,7 @@ export const Hero: NextPage = () => {
           </Grid>
         </Grid>
       </Container>
+      <Divider />
     </Box>
   )
 }
