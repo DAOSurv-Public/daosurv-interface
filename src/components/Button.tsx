@@ -1,32 +1,35 @@
 import {
   Button as MuiButton,
   ButtonProps as MuiButtonProps,
-} from "@mui/material";
-import styled from "@emotion/styled";
+} from "@mui/material"
+import styled from "@emotion/styled"
 
 interface ButtonProps extends MuiButtonProps {
   //width is pixel
-  width?: number;
+  width?: number
 }
 export const DefaultButton = styled(MuiButton)<ButtonProps>`
   min-width: ${({ width }) => (width ? `${width}px` : "auto")};
-`;
+`
 
 export const DefaultOutlineButton = (props: ButtonProps) => {
-  return <DefaultButton {...props} />;
+  return <DefaultButton {...props} />
   // this line make text to uppercase
   // return <MuiButton variant="outlined" {...props} />
-};
+}
 
 export const PrimaryButton = styled(DefaultButton)`
   color: white;
   border: none;
-  background: #0075ff;
+  background: #0f35ff;
   border-radius: 40px;
   padding: 8px 24px;
   min-width: ${({ width }) => (width ? `${width}px` : "auto")};
   box-shadow: none;
-`;
+  :hover {
+    background: #0f35ff;
+  }
+`
 
 export const OutLineTransparentButton = styled(DefaultOutlineButton)`
   color: white;
@@ -35,4 +38,4 @@ export const OutLineTransparentButton = styled(DefaultOutlineButton)`
   border-radius: 100px;
   padding: 8px;
   min-width: ${({ width }) => (width ? `${width}px` : "auto")};
-`;
+`

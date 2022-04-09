@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import styled from "@emotion/styled";
-import { Menu as MenuIcon } from "@mui/icons-material";
+import React, { useEffect, useState } from "react"
+import styled from "@emotion/styled"
+import { Menu as MenuIcon } from "@mui/icons-material"
 import {
   Avatar,
   Button,
@@ -17,12 +17,13 @@ import {
   Tabs,
   Typography,
   useScrollTrigger,
-} from "@mui/material";
-import { compact } from "lodash";
-import Router, { useRouter } from "next/router";
-import Link from "next/link";
-import { NextLinkComposed } from "views/NextLinkComposed";
-import { PrimaryButton } from "components/Button";
+  Divider,
+} from "@mui/material"
+import { compact } from "lodash"
+import Router, { useRouter } from "next/router"
+import Link from "next/link"
+import { NextLinkComposed } from "views/NextLinkComposed"
+import { PrimaryButton } from "components/Button"
 
 const Wrapper = styled.div<{ elevated: boolean }>`
   position: sticky;
@@ -37,7 +38,7 @@ const Wrapper = styled.div<{ elevated: boolean }>`
   /* box-shadow: ${(props) =>
     props.elevated ? props.theme.shadows[4] : "none"}; */
   /* transition: box-shadow 300ms; */
-`;
+`
 
 const Content = styled(Container)`
   display: flex;
@@ -45,42 +46,42 @@ const Content = styled(Container)`
   align-items: center;
   padding: 0 1rem;
   min-height: 58px;
-`;
+`
 
 export const Navbar = () => {
-  const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const [isDrawerOpen, setDrawerOpen] = useState(false)
 
-  const router = useRouter();
+  const router = useRouter()
 
-  const elevated = useScrollTrigger({ threshold: 20, disableHysteresis: true });
+  const elevated = useScrollTrigger({ threshold: 20, disableHysteresis: true })
 
   const tabs = compact([
     {
-      label: "Menu1",
+      label: "DaoAlert",
       value: "/",
       selected: router.pathname === "/",
     },
     {
-      label: "Menu2",
+      label: "Widget",
       value: "/menu2",
       selected: router.pathname.startsWith("/menu2"),
     },
     {
-      label: "Menu3",
+      label: "Twitter alert",
       value: "/menu3",
       selected: router.pathname.startsWith("/menu3"),
     },
-  ]);
+  ])
 
   useEffect(() => {
     const onRouteChangeStart = () => {
-      setDrawerOpen(false);
-    };
+      setDrawerOpen(false)
+    }
 
-    Router.events.on("routeChangeStart", onRouteChangeStart);
+    Router.events.on("routeChangeStart", onRouteChangeStart)
 
-    return () => Router.events.off("routeChangeStart", onRouteChangeStart);
-  }, []);
+    return () => Router.events.off("routeChangeStart", onRouteChangeStart)
+  }, [])
 
   return (
     <>
@@ -90,10 +91,6 @@ export const Navbar = () => {
         onClose={() => setDrawerOpen(false)}
         PaperProps={{ sx: { minWidth: 260, bgcolor: "rgba(9, 9, 15, 1)" } }}
       >
-        <Box mt={3} mb={2} textAlign="center">
-          {/* <Button onClick={handleActionClick}>{label}</Button> */}
-        </Box>
-
         <List>
           {tabs.map((tab) => (
             <ListItemButton
@@ -131,28 +128,37 @@ export const Navbar = () => {
       </Drawer>
 
       <Wrapper elevated={elevated}>
-        <Content maxWidth="xl" sx={{ alignItem: "center" }}>
-          <Link href="/">
-            <a>
-              <img src="/static/images/logo.svg" height={40} />
-            </a>
-          </Link>
-          <Box>
-            <Tabs value={tabs.find((tab) => tab.selected)?.value ?? false}>
-              {tabs.map((tab) => (
-                <Tab
-                  key={tab.value}
-                  label={tab.label}
-                  value={tab.value}
-                  component={NextLinkComposed}
-                  to={tab.value}
-                />
-              ))}
-              <PrimaryButton>Button</PrimaryButton>
-            </Tabs>
-          </Box>
-        </Content>
+        <Box sx={{ background: "white", py: "10px" }}>
+          <Content maxWidth="xl" sx={{ alignItem: "center" }}>
+            <Link href="/">
+              <a>
+                <img src="/static/images/logo.svg" height={40} />
+              </a>
+            </Link>
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <Stack spacing={3} direction="row">
+                {tabs.map((tab, index) => (
+                  <Button
+                    key={index}
+                    variant="text"
+                    sx={{ fontSize: "16px", fontWeight: "bold" }}
+                  >
+                    {tab.label}
+                  </Button>
+                ))}
+                <PrimaryButton sx={{ fontSize: "16px", fontWeight: "bold" }}>
+                  Try widget
+                </PrimaryButton>
+              </Stack>
+            </Box>
+          </Content>
+        </Box>
+        <Divider />
       </Wrapper>
     </>
-  );
-};
+  )
+}
