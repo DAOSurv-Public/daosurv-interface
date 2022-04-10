@@ -59,18 +59,23 @@ export const Navbar = () => {
 
   const tabs = compact([
     {
-      label: "DaoAlert",
-      value: "/",
-      selected: router.pathname === "/",
+      label: "DaoSurv",
+      id: "#hero-section",
+      selected: "",
     },
     {
-      label: "Widget",
-      value: "/menu2",
+      label: "Survelliance",
+      id: "#mockA-section",
       selected: router.pathname.startsWith("/menu2"),
     },
     {
-      label: "Twitter alert",
-      value: "/menu3",
+      label: "Solution",
+      id: "#solution-section",
+      selected: router.pathname.startsWith("/menu3"),
+    },
+    {
+      label: "How it work",
+      id: "#howitwork-section",
       selected: router.pathname.startsWith("/menu3"),
     },
   ])
@@ -85,6 +90,11 @@ export const Navbar = () => {
     return () => Router.events.off("routeChangeStart", onRouteChangeStart)
   }, [])
 
+  const handleClick = (id: string) => {
+    const section = document.querySelector(id)
+    section.scrollIntoView({ behavior: "smooth", block: "center" })
+  }
+
   return (
     <>
       <Drawer
@@ -96,9 +106,9 @@ export const Navbar = () => {
         <List>
           {tabs.map((tab) => (
             <ListItemButton
-              key={tab.value}
+              key={tab.label}
               selected={tab.selected}
-              onClick={() => router.push(tab.value)}
+              onClick={() => handleClick(tab.id)}
               sx={{ pl: 4 }}
             >
               <ListItemText
@@ -111,7 +121,10 @@ export const Navbar = () => {
             </ListItemButton>
           ))}
           <ListItemButton>
-            <PrimaryButton sx={{ fontSize: "12px", fontWeight: "bold" }}>
+            <PrimaryButton
+              sx={{ fontSize: "12px", fontWeight: "bold" }}
+              onClick={() => handleClick("#widget-section")}
+            >
               Try widget
             </PrimaryButton>
           </ListItemButton>
@@ -148,11 +161,15 @@ export const Navbar = () => {
                     key={index}
                     variant="text"
                     sx={{ fontSize: "16px", fontWeight: "bold" }}
+                    onClick={() => handleClick(tab.id)}
                   >
                     {tab.label}
                   </Button>
                 ))}
-                <PrimaryButton sx={{ fontSize: "16px", fontWeight: "bold" }}>
+                <PrimaryButton
+                  sx={{ fontSize: "16px", fontWeight: "bold" }}
+                  onClick={() => handleClick("#widget-section")}
+                >
                   Try widget
                 </PrimaryButton>
               </Stack>

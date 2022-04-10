@@ -49,6 +49,7 @@ export const Widget: NextPage = () => {
                 display: { xs: "flex", lg: "block" },
                 justifyContent: "center",
               }}
+              id="widget-section"
             >
               <Image
                 src="https://dummyimage.com/450x280/fff/aaa"

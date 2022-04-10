@@ -19,6 +19,7 @@ export const Hero: NextPage = () => {
         backgroundRepeat: "no-repeat",
         backgroundPositionX: { xs: "center", lg: "auto" },
       }}
+      id="hero-section"
     >
       <Container maxWidth="lg">
         <Grid

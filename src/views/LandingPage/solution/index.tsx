@@ -28,9 +28,12 @@ export const Solution = () => {
   const { isDesktop } = useResponsive()
 
   return (
-    <Box sx={{ py: { xs: "96px" } }}>
+    <Box sx={{ py: { xs: "96px" } }} id={isDesktop && "solution-section"}>
       <Container maxWidth="lg">
-        <Box sx={{ width: { xs: "auto", lg: "400px" } }}>
+        <Box
+          sx={{ width: { xs: "auto", lg: "400px" } }}
+          id={!isDesktop && "solution-section"}
+        >
           <Typography
             sx={{
               fontSize: { xs: "36px", lg: "48px" },

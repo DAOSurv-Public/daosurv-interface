@@ -6,7 +6,7 @@ import { CustomDivider } from "components/CustomDivider"
 
 export const HowItWork = () => {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" id="howitwork-section">
       <Box display="flex" justifyContent="center">
         <Box sx={{ width: { xs: "350px" } }}>
           <Typography
