@@ -24,8 +24,8 @@ export const Widget: NextPage = () => {
           <Grid item xs={12} lg={6}>
             <TwitterTimelineEmbed
               sourceType="profile"
-              screenName="DaoSurv"
-              // screenName="0xmuramasa"
+              // screenName="DaoSurv"
+              screenName="0xmuramasa"
               options={{ height: "545px" }}
               noFooter={true}
             />
