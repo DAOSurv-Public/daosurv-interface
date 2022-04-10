@@ -18,7 +18,7 @@ export const Card: React.FC<Props> = (props) => {
         p="16px"
         height="100%"
       >
-        <Box width="100%" height="100%">
+        <Box width="100%" height="100%" display="flex" justifyContent="center">
           <Image
             src="https://dummyimage.com/450x280/fff/aaa"
             width="450px"

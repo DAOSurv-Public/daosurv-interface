@@ -9,7 +9,7 @@ export const Social = () => {
       justifyContent="center"
       gridTemplateColumns="24px 24px"
       gap="24px"
-      my="48px"
+      py="48px"
     >
       <Image
         src="/static/icons/git.svg"

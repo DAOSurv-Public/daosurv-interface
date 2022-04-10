@@ -7,7 +7,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed"
 import { useResponsive } from "hooks/useResponsive"
 
 export const Widget: NextPage = () => {
-  const { isDesktop } = useResponsive()
+  const { isDesktop } = useResponsive({ noSsr: true })
 
   return (
     <Box
@@ -15,6 +15,8 @@ export const Widget: NextPage = () => {
         py: { xs: "96px" },
         backgroundImage: { lg: `url("/static/images/hero-bg.svg")` },
         backgroundPositionY: "bottom",
+        backgroundPositionX: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <Container maxWidth="lg">
@@ -23,7 +25,7 @@ export const Widget: NextPage = () => {
             <TwitterTimelineEmbed
               sourceType="profile"
               screenName="daosurv"
-              options={{ height: isDesktop ? "591px" : "400px" }}
+              options={{ height: "545px" }}
             />
           </Grid>
           <Grid item xs={12} lg={6}>
@@ -42,12 +44,19 @@ export const Widget: NextPage = () => {
               </Typography>
               <CustomDivider width="260px" />
             </Box>
+            <Box
+              sx={{
+                display: { xs: "flex", lg: "block" },
+                justifyContent: "center",
+              }}
+            >
+              <Image
+                src="https://dummyimage.com/450x280/fff/aaa"
+                width="464px"
+                height="392px"
+              />
+            </Box>
 
-            <Image
-              src="https://dummyimage.com/450x280/fff/aaa"
-              width="464px"
-              height="392px"
-            />
             <Typography
               sx={{
                 fontSize: { xs: "48px" },

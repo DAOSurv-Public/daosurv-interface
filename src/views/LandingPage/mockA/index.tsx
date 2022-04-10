@@ -9,7 +9,7 @@ export const MockA = () => {
   const { isDesktop } = useResponsive()
 
   return (
-    <Box sx={{ pt: { xs: "46px", lg: "46px" } }}>
+    <Box sx={{ pt: { xs: "46px", lg: "96px" } }}>
       <Container maxWidth="lg">
         <Grid container spacing={6}>
           <Grid
@@ -51,7 +51,7 @@ export const MockA = () => {
                   fontWeight: { xs: 700 },
                   color: "#0D0D0D",
                   lineHeight: "40px",
-                  mt: { xs: "12px", lg: 0 },
+                  mt: { xs: "12px" },
                 }}
               >
                 Lorem ipsum dolor sit amet
