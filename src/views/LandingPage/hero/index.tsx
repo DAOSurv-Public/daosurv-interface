@@ -61,7 +61,7 @@ export const Hero: NextPage = () => {
                     fontWeight: { xs: 700 },
                   }}
                 >
-                  Survive
+                  Surveillance
                 </Typography>{" "}
                 DAO to Longterm Success
               </Typography>
@@ -73,7 +73,7 @@ export const Hero: NextPage = () => {
                 }}
               >
                 Cultivating DAO to success <br />
-                <b>survive</b> longterm through <b>survelliance</b>
+                <b>survive</b> longterm through <b>surveillance</b>
                 <br />
                 and <b>surveying</b> services
               </Typography>
