@@ -1,14 +1,15 @@
-import type { NextPage } from "next"
-import { Box, Container, Typography, Grid, Divider } from "@mui/material"
-import { PrimaryButton } from "components/Button"
-import TextLoop from "react-text-loop"
-import Image from "next/image"
-import { useResponsive } from "hooks/useResponsive"
-import { constants } from "constants/index"
-import Link from "next/link"
+import type { NextPage } from "next";
+import { Box, Container, Typography, Grid, Divider } from "@mui/material";
+import { PrimaryButton } from "components/Button";
+import TextLoop from "react-text-loop";
+import Typed from "react-typed";
+import Image from "next/image";
+import { useResponsive } from "hooks/useResponsive";
+import { constants } from "constants/index";
+import Link from "next/link";
 
 export const Hero: NextPage = () => {
-  const { isDesktop } = useResponsive()
+  const { isDesktop } = useResponsive();
 
   return (
     <Box
@@ -61,8 +62,12 @@ export const Hero: NextPage = () => {
                     fontWeight: { xs: 700 },
                   }}
                 >
-                  Surveillance
-                </Typography>{" "}
+                  <Typed
+                    strings={["Survive", "Surveillance", "Surveying"]}
+                    typeSpeed={80}
+                    loop={true}
+                  />
+                </Typography>
                 DAO to Longterm Success
               </Typography>
               <Typography
@@ -114,5 +119,5 @@ export const Hero: NextPage = () => {
       </Container>
       <Divider />
     </Box>
-  )
-}
+  );
+};
