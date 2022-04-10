@@ -40,6 +40,7 @@ const CustomApp = (props: MyAppProps) => {
           <Layout>
             <Component {...pageProps} />
           </Layout>
+          <div className="daoalert-widget" data-symbol="aave" />
         </AppThemeProvider>
       </StylesProvider>
     </CacheProvider>
