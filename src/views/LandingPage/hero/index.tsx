@@ -4,6 +4,8 @@ import { PrimaryButton } from "components/Button"
 import TextLoop from "react-text-loop"
 import Image from "next/image"
 import { useResponsive } from "hooks/useResponsive"
+import { constants } from "constants/index"
+import Link from "next/link"
 
 export const Hero: NextPage = () => {
   const { isDesktop } = useResponsive()
@@ -81,9 +83,13 @@ export const Hero: NextPage = () => {
                   mb: { xs: "56px", lg: 0 },
                 }}
               >
-                <PrimaryButton variant="contained" sx={{ mt: "24px" }}>
-                  To Twitter
-                </PrimaryButton>
+                <Link href={constants.tw_url}>
+                  <a href={constants.tw_url} target="_blank" rel="noreferrer">
+                    <PrimaryButton variant="contained" sx={{ mt: "24px" }}>
+                      To Twitter
+                    </PrimaryButton>
+                  </a>
+                </Link>
               </Box>
             </Box>
           </Grid>
