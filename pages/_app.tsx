@@ -31,7 +31,7 @@ const CustomApp = (props: MyAppProps) => {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
-        <title>DaoAlert</title>
+        <title>DaoSurv</title>
       </Head>
       <GlobalStyle />
       <StylesProvider injectFirst>
