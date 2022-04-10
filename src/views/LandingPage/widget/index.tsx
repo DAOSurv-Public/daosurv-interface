@@ -10,7 +10,7 @@ export const Widget: NextPage = () => {
   const { isDesktop } = useResponsive({ noSsr: true })
 
   return (
-    <Box>
+    <Box sx={{ pt: { xs: "46px", lg: "96px" } }}>
       <Container maxWidth="lg">
         <Grid container spacing={6}>
           <Grid item xs={12} lg={6}>

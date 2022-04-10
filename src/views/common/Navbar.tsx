@@ -63,11 +63,11 @@ export const Navbar = () => {
       id: "#hero-section",
       selected: "",
     },
-    {
-      label: "Survelliance",
-      id: "#mockA-section",
-      selected: router.pathname.startsWith("/menu2"),
-    },
+    // {
+    //   label: "Survelliance",
+    //   id: "#mockA-section",
+    //   selected: router.pathname.startsWith("/menu2"),
+    // },
     {
       label: "Solution",
       id: "#solution-section",
