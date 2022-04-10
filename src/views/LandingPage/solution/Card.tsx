@@ -6,9 +6,10 @@ import { CustomDivider } from "components/CustomDivider"
 type Props = {
   title: string
   description: string
+  image: string
 }
 export const Card: React.FC<Props> = (props) => {
-  const { title, description } = props
+  const { title, description, image } = props
   return (
     <Grid item xs={12} lg={4}>
       <Box
@@ -19,11 +20,7 @@ export const Card: React.FC<Props> = (props) => {
         height="100%"
       >
         <Box width="100%" height="100%" display="flex" justifyContent="center">
-          <Image
-            src="https://dummyimage.com/450x280/fff/aaa"
-            width="450px"
-            height="280px"
-          />
+          <Image src={image} width="450px" height="300px" />
         </Box>
         <Box px="16px">
           <Typography

@@ -9,16 +9,19 @@ import { useResponsive } from "hooks/useResponsive"
 const contents = [
   {
     title: "Surveillance",
+    image: "/static/images/solution1.png",
     description:
       "Monitoring DAO activities such as treasury movement, protocol parameter update, other on-chain changes then feed directly to social media for public alert",
   },
   {
     title: "Survey",
+    image: "/static/images/solution2.png",
     description:
       "When DAO’s governance proposal will be announced to gather public social feedback this encourage proposal participation, voicing public idea without committing or owning token",
   },
   {
     title: "Survive",
+    image: "/static/images/solution3.png",
     description:
       "The analytics module on Interactions with surveillance data will be valuable knowledge to improve DAO operation for long-term success. DAO able to experiments on social sentiment and iteratively improve the operations",
   },
@@ -73,12 +76,7 @@ export const Solution = () => {
               mt: { xs: "12px" },
               textAlign: { xs: "center", lg: "left" },
             }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada
-            bibendum egestas fermentum feugiat. Amet, non in diam tristique
-            purus tortor ut elit. Id urna, turpis eget nulla iaculis tortor.
-            Nisl
-          </Typography>
+          ></Typography>
         </Box>
         <Grid container mt="24px" spacing={3}>
           {contents.map((content, idx) => (

@@ -10,15 +10,7 @@ export const Widget: NextPage = () => {
   const { isDesktop } = useResponsive({ noSsr: true })
 
   return (
-    <Box
-      sx={{
-        py: { xs: "96px" },
-        backgroundImage: { lg: `url("/static/images/hero-bg.svg")` },
-        backgroundPositionY: "bottom",
-        backgroundPositionX: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <Box>
       <Container maxWidth="lg">
         <Grid container spacing={6}>
           <Grid item xs={12} lg={6}>
@@ -54,7 +46,7 @@ export const Widget: NextPage = () => {
               id="widget-section"
             >
               <Image
-                src="https://dummyimage.com/450x280/fff/aaa"
+                src="/static/images/daosurv-2.svg"
                 width="464px"
                 height="392px"
               />
