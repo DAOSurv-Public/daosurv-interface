@@ -105,7 +105,7 @@ export const Hero: NextPage = () => {
             }}
           >
             <Image
-              src="/static/images/hero.png"
+              src="/static/images/hero.svg"
               width={isDesktop ? "528" : "168"}
               height={isDesktop ? "511" : "142"}
             />
