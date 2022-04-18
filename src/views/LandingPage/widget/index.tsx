@@ -17,7 +17,7 @@ export const Widget: NextPage = () => {
             <TwitterTimelineEmbed
               sourceType="profile"
               // screenName="DaoSurv"
-              screenName="0xmuramasa"
+              screenName="DaoSurv"
               options={{ height: "545px" }}
               noFooter={true}
             />
